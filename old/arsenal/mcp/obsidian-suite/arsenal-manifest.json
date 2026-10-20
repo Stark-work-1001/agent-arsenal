@@ -1,0 +1,24 @@
+{
+    "asset_id":  "mcp::plugin-obsidian-suite",
+    "managed_at":  "2026-10-17 19:41:45",
+    "managed_by":  "agent-arsenal",
+    "source_plugin":  "<plugin-root>/obsidian-suite",
+    "servers":  [
+                    {
+                        "name":  "obsidian-rest",
+                        "command":  "<python-interpreter>",
+                        "args":  [
+                                     "<workspace>/arsenal/mcp/obsidian-suite/mcp/server_entry.py"
+                                 ],
+                        "cwd":  "<workspace>/arsenal/mcp/obsidian-suite/mcp"
+                    },
+                    {
+                        "name":  "obsidian-cli",
+                        "command":  "<python-interpreter>",
+                        "args":  [
+                                     "<workspace>/arsenal/mcp/obsidian-suite/mcp/obsidian_cli_server.py"
+                                 ],
+                        "cwd":  "<workspace>/arsenal/mcp/obsidian-suite/mcp"
+                    }
+                ]
+}

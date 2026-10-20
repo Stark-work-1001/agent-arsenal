@@ -1,0 +1,29 @@
+{
+  "name": "agent-arsenal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Agent Arsenal · 智能体核武库 —— 跨智能体能力中枢",
+  "main": "apps/desktop/src/main/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build:web": "vite build --config apps/desktop/vite.config.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/start.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc -p apps/desktop/tsconfig.json --noEmit",
+    "bench": "node scripts/bench-search.mjs",
+    "mcp:http": "node apps/desktop/src/main/cli.js serve"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "44.7.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
+  }
+}

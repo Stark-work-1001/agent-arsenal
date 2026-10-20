@@ -1,0 +1,787 @@
+{
+  "generated_at_unix": 1700000000,
+  "db_path": "<数据目录>\\registry.db",
+  "scan_root": "<项目根>\\vendor",
+  "total": 10,
+  "counts": [
+    {
+      "kind": "mcp",
+      "count": 1
+    },
+    {
+      "kind": "plugin",
+      "count": 1
+    },
+    {
+      "kind": "skill",
+      "count": 8
+    }
+  ],
+  "items": [
+    {
+      "id": "mcp::demo-doc-tools-1-0-0",
+      "kind": "mcp",
+      "name": "DocTools",
+      "version": "1.0.0",
+      "description": "MCP server 配置，包含 1 个 server",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "pure",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\mcp\\doc-tools\\1.0.0\\.mcp.json",
+      "logical_id": "l1-3f8a1c0d9e27b645",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "DocTools",
+      "author_source": "package",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "deepseek-harness",
+        "kimi-code",
+        "minimax-code",
+        "qoder",
+        "workbuddy",
+        "zcode"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "mcp::demo-doc-tools-1-0-0",
+        "kind": "mcp",
+        "name": "DocTools",
+        "version": "1.0.0",
+        "description": "MCP server 配置，包含 1 个 server",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "pure",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "mcp::demo-doc-tools-1-0-0::doc-read",
+            "name": "doc-read",
+            "summary": "stdio server，启动命令 ${HOST_NODE_RUNTIME}",
+            "tags": [
+              "tool"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\mcp\\doc-tools\\1.0.0\\.mcp.json",
+          "imported_at": "1700000000",
+          "content_hash": "3f8a1c0d9e27b645",
+          "source_format": "skill_md",
+          "normalized_hash": "aa11bb22cc33dd44",
+          "runtime_refs": [
+            "${HOST_NODE_RUNTIME}",
+            "${HOST_PLUGIN_ROOT}/runtime/server.cjs"
+          ]
+        }
+      }
+    },
+    {
+      "id": "plugin::demo-workflow-kit-0-2-1",
+      "kind": "plugin",
+      "name": "workflow-kit",
+      "version": "0.2.1",
+      "description": "插件包，包含 3 个技能",
+      "authority": "write",
+      "authority_label": "可写",
+      "tool_posture": "writer",
+      "side_effect": "local_write",
+      "role": "plugin",
+      "capability_count": 3,
+      "source_path": "<项目根>\\vendor\\plugin\\workflow-kit\\0.2.1",
+      "logical_id": "l1-7b2e55c4a1f09d38",
+      "location_count": 2,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "workflow-kit",
+      "author_source": "package",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "qoder"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "plugin::demo-workflow-kit-0-2-1",
+        "kind": "plugin",
+        "name": "workflow-kit",
+        "version": "0.2.1",
+        "description": "插件包，包含 3 个技能",
+        "identity": {
+          "authority": "write",
+          "side_effect": "local_write",
+          "tool_posture": "writer",
+          "idempotent": false,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "plugin::demo-workflow-kit-0-2-1::plan",
+            "name": "plan",
+            "summary": "把任务拆成可执行步骤",
+            "tags": [
+              "skill",
+              "planning"
+            ]
+          },
+          {
+            "capability_id": "plugin::demo-workflow-kit-0-2-1::apply",
+            "name": "apply",
+            "summary": "按计划改动工作区文件",
+            "tags": [
+              "skill",
+              "edit"
+            ]
+          },
+          {
+            "capability_id": "plugin::demo-workflow-kit-0-2-1::verify",
+            "name": "verify",
+            "summary": "跑验收命令并汇总结果",
+            "tags": [
+              "skill",
+              "verify"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\plugin\\workflow-kit\\0.2.1",
+          "imported_at": "1700000000",
+          "content_hash": "7b2e55c4a1f09d38",
+          "source_format": "skill_md",
+          "normalized_hash": "bb22cc33dd44ee55",
+          "runtime_refs": [
+            "${HOST_PLUGIN_ROOT}/runtime/runner.cjs"
+          ]
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-changelog-writer-0-1-2",
+      "kind": "skill",
+      "name": "changelog-writer",
+      "version": "0.1.2",
+      "description": "按提交历史生成变更日志",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "reader",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\skill\\changelog-writer\\0.1.2\\SKILL.md",
+      "logical_id": "l1-c4d9e07f2b6a8135",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "changelog-writer",
+      "author_source": "frontmatter",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "deepseek-harness",
+        "kimi-code",
+        "minimax-code",
+        "qoder",
+        "workbuddy",
+        "zcode"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-changelog-writer-0-1-2",
+        "kind": "skill",
+        "name": "changelog-writer",
+        "version": "0.1.2",
+        "description": "按提交历史生成变更日志",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "reader",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-changelog-writer-0-1-2::changelog",
+            "name": "changelog",
+            "summary": "读提交历史，输出分组后的变更条目",
+            "tags": [
+              "skill",
+              "docs"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\skill\\changelog-writer\\0.1.2\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "c4d9e07f2b6a8135",
+          "source_format": "skill_md",
+          "normalized_hash": "cc33dd44ee55ff66",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-schema-linter-0-3-0",
+      "kind": "skill",
+      "name": "schema-linter",
+      "version": "0.3.0",
+      "description": "校验配置文件的结构与字段类型",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "reader",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\skill\\schema-linter\\0.3.0\\SKILL.md",
+      "logical_id": "l1-1a2b3c4d5e6f7081",
+      "location_count": 2,
+      "location_role": "alias",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "schema-linter",
+      "author_source": "frontmatter",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "deepseek-harness",
+        "kimi-code",
+        "minimax-code",
+        "qoder",
+        "workbuddy",
+        "zcode"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-schema-linter-0-3-0",
+        "kind": "skill",
+        "name": "schema-linter",
+        "version": "0.3.0",
+        "description": "校验配置文件的结构与字段类型",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "reader",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-schema-linter-0-3-0::lint",
+            "name": "lint",
+            "summary": "对给定文件做结构校验并报告问题行",
+            "tags": [
+              "skill",
+              "lint"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\skill\\schema-linter\\0.3.0\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "1a2b3c4d5e6f7081",
+          "source_format": "skill_md",
+          "normalized_hash": "dd44ee55ff660011",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-release-notes-0-0-9",
+      "kind": "skill",
+      "name": "release-notes",
+      "version": "0.0.9",
+      "description": "整理发布说明草稿",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "pure",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\skill\\release-notes\\0.0.9\\SKILL.md",
+      "logical_id": "l1-9e8d7c6b5a493827",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "paused",
+      "author": "release-notes",
+      "author_source": "frontmatter",
+      "host_support": [
+        "claude-code",
+        "deepseek-harness"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-release-notes-0-0-9",
+        "kind": "skill",
+        "name": "release-notes",
+        "version": "0.0.9",
+        "description": "整理发布说明草稿",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "pure",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-release-notes-0-0-9::draft",
+            "name": "draft",
+            "summary": "从变更条目拼出发布说明草稿",
+            "tags": [
+              "skill",
+              "docs"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\skill\\release-notes\\0.0.9\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "9e8d7c6b5a493827",
+          "source_format": "skill_md",
+          "normalized_hash": "ee55ff6600112233",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-trace-digest-1-2-0",
+      "kind": "skill",
+      "name": "trace-digest",
+      "version": "1.2.0",
+      "description": "把运行日志压成一段可读摘要",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "reader",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\skill\\trace-digest\\1.2.0\\SKILL.md",
+      "logical_id": "l1-5f6e7d8c9b0a1f2e",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "trace-digest",
+      "author_source": "package",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "deepseek-harness",
+        "kimi-code",
+        "minimax-code",
+        "qoder",
+        "workbuddy",
+        "zcode"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-trace-digest-1-2-0",
+        "kind": "skill",
+        "name": "trace-digest",
+        "version": "1.2.0",
+        "description": "把运行日志压成一段可读摘要",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "reader",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-trace-digest-1-2-0::digest",
+            "name": "digest",
+            "summary": "按错误类型聚合日志并给出耗时分布",
+            "tags": [
+              "skill",
+              "observability"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\skill\\trace-digest\\1.2.0\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "5f6e7d8c9b0a1f2e",
+          "source_format": "skill_md",
+          "normalized_hash": "ff66001122334455",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-workspace-map-0-4-1",
+      "kind": "skill",
+      "name": "workspace-map",
+      "version": "0.4.1",
+      "description": "列出工作区里的包与它们之间的依赖",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "reader",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 2,
+      "source_path": "<工作区>\\skills\\workspace-map\\SKILL.md",
+      "logical_id": "l1-0a1b2c3d4e5f6071",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "self_built",
+      "registration_kind": "mounted",
+      "origin_agent": "",
+      "self_contained": false,
+      "lifecycle": "active",
+      "author": "workspace-map",
+      "author_source": "frontmatter",
+      "host_support": [
+        "deepseek-harness"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-workspace-map-0-4-1",
+        "kind": "skill",
+        "name": "workspace-map",
+        "version": "0.4.1",
+        "description": "列出工作区里的包与它们之间的依赖",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "reader",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-workspace-map-0-4-1::map",
+            "name": "map",
+            "summary": "输出包清单与依赖边",
+            "tags": [
+              "skill",
+              "analysis"
+            ]
+          },
+          {
+            "capability_id": "skill::skill-demo-workspace-map-0-4-1::cycles",
+            "name": "cycles",
+            "summary": "找出依赖环",
+            "tags": [
+              "skill",
+              "analysis"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<工作区>\\skills\\workspace-map\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "0a1b2c3d4e5f6071",
+          "source_format": "skill_md",
+          "normalized_hash": "00112233445566aa",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-prompt-reviewer-0-1-0",
+      "kind": "skill",
+      "name": "prompt-reviewer",
+      "version": "0.1.0",
+      "description": "按清单检查提示词草稿",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "pure",
+      "side_effect": "none",
+      "role": "reviewer",
+      "capability_count": 1,
+      "source_path": "<工作区>\\skills\\prompt-reviewer\\SKILL.md",
+      "logical_id": "l1-2c3d4e5f60718293",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "nurtured",
+      "registration_kind": "remote",
+      "origin_agent": "",
+      "self_contained": false,
+      "lifecycle": "active",
+      "author": "",
+      "author_source": "",
+      "host_support": [],
+      "host_support_basis": [
+        "判不出归属宿主：包内没有宿主标记文件，按协议 mcp-stdio 无法推定，留空而不是写 unknown"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-prompt-reviewer-0-1-0",
+        "kind": "skill",
+        "name": "prompt-reviewer",
+        "version": "0.1.0",
+        "description": "按清单检查提示词草稿",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "pure",
+          "idempotent": true,
+          "open_world": true,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-prompt-reviewer-0-1-0::review",
+            "name": "review",
+            "summary": "按条目给出通过/不通过与理由",
+            "tags": [
+              "skill",
+              "review"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<工作区>\\skills\\prompt-reviewer\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "2c3d4e5f60718293",
+          "source_format": "skill_md",
+          "normalized_hash": "11223344556677bb",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-fixture-builder-0-6-3",
+      "kind": "skill",
+      "name": "fixture-builder",
+      "version": "0.6.3",
+      "description": "按 schema 生成测试夹具",
+      "authority": "write",
+      "authority_label": "可写",
+      "tool_posture": "writer",
+      "side_effect": "local_write",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<工作区>\\skills\\fixture-builder\\SKILL.md",
+      "logical_id": "l1-3d4e5f60718293a4",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "self_built",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "archived",
+      "author": "fixture-builder",
+      "author_source": "manifest",
+      "host_support": [
+        "codex",
+        "qoder"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-fixture-builder-0-6-3",
+        "kind": "skill",
+        "name": "fixture-builder",
+        "version": "0.6.3",
+        "description": "按 schema 生成测试夹具",
+        "identity": {
+          "authority": "write",
+          "side_effect": "local_write",
+          "tool_posture": "writer",
+          "idempotent": false,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-fixture-builder-0-6-3::build",
+            "name": "build",
+            "summary": "读 schema 并写出示例夹具文件",
+            "tags": [
+              "skill",
+              "test"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<工作区>\\skills\\fixture-builder\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "3d4e5f60718293a4",
+          "source_format": "skill_md",
+          "normalized_hash": "22334455667788cc",
+          "runtime_refs": []
+        }
+      }
+    },
+    {
+      "id": "skill::skill-demo-license-audit-0-2-0",
+      "kind": "skill",
+      "name": "license-audit",
+      "version": "0.2.0",
+      "description": "汇总依赖的许可证类型",
+      "authority": "read",
+      "authority_label": "只读",
+      "tool_posture": "reader",
+      "side_effect": "none",
+      "role": null,
+      "capability_count": 1,
+      "source_path": "<项目根>\\vendor\\skill\\license-audit\\0.2.0\\SKILL.md",
+      "logical_id": "l1-4e5f60718293a4b5",
+      "location_count": 1,
+      "location_role": "canonical",
+      "origin_kind": "vendor",
+      "registration_kind": "embedded",
+      "origin_agent": "",
+      "self_contained": true,
+      "lifecycle": "active",
+      "author": "license-audit",
+      "author_source": "frontmatter",
+      "host_support": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "deepseek-harness",
+        "kimi-code",
+        "minimax-code",
+        "qoder",
+        "workbuddy",
+        "zcode"
+      ],
+      "host_support_basis": [
+        "没有 origin_agent / 标记目录证据，按协议 mcp-stdio 判：9 个宿主全部可用"
+      ],
+      "manifest": {
+        "schema_version": "1.0",
+        "id": "skill::skill-demo-license-audit-0-2-0",
+        "kind": "skill",
+        "name": "license-audit",
+        "version": "0.2.0",
+        "description": "汇总依赖的许可证类型",
+        "identity": {
+          "authority": "read",
+          "side_effect": "none",
+          "tool_posture": "reader",
+          "idempotent": true,
+          "open_world": false,
+          "dimensions": {
+            "cost_tier": "low"
+          }
+        },
+        "provides": [
+          {
+            "capability_id": "skill::skill-demo-license-audit-0-2-0::audit",
+            "name": "audit",
+            "summary": "读锁文件并统计许可证分布",
+            "tags": [
+              "skill",
+              "compliance"
+            ]
+          }
+        ],
+        "provenance": {
+          "source_path": "<项目根>\\vendor\\skill\\license-audit\\0.2.0\\SKILL.md",
+          "imported_at": "1700000000",
+          "content_hash": "4e5f60718293a4b5",
+          "source_format": "skill_md",
+          "normalized_hash": "33445566778899dd",
+          "runtime_refs": []
+        }
+      }
+    }
+  ],
+  "dedup_candidates": [
+    {
+      "group_key": "l1-1a2b3c4d5e6f7081",
+      "match_level": "l1",
+      "suggested_canonical": "loc-skill::skill-demo-schema-linter-0-3-0",
+      "location_ids": [
+        "loc-skill::skill-demo-schema-linter-0-3-0",
+        "loc-skill::skill-demo-schema-linter-0-3-0-vendor-copy"
+      ]
+    },
+    {
+      "group_key": "l1-7b2e55c4a1f09d38",
+      "match_level": "l2",
+      "suggested_canonical": "loc-plugin::demo-workflow-kit-0-2-1",
+      "location_ids": [
+        "loc-plugin::demo-workflow-kit-0-2-1",
+        "loc-plugin::demo-workflow-kit-0-2-1-mirror"
+      ]
+    }
+  ],
+  "logical_total": 8,
+  "alias_count": 2
+}

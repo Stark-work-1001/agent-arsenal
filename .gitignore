@@ -1,0 +1,8 @@
+node_modules/
+dist-renderer/
+data/
+release/
+arsenal-data/
+.agentcore-appdata/
+*.log
+*.zip

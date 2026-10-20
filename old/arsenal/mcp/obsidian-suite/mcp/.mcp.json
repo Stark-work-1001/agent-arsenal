@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "obsidian-rest": {
+      "command": "<python-interpreter>",
+      "args": [
+        "<plugin-root>/mcp/server_entry.py"
+      ],
+      "env": {
+        "OBSIDIAN_API_KEY": "<paste the key from Obsidian > Settings > Local REST API>",
+        "OBSIDIAN_HOST": "127.0.0.1",
+        "OBSIDIAN_PORT": "27124",
+        "OBSIDIAN_PROTOCOL": "https"
+      }
+    },
+    "obsidian-cli": {
+      "command": "<python-interpreter>",
+      "args": [
+        "<plugin-root>/mcp/obsidian_cli_server.py"
+      ],
+      "env": {
+        "OBSIDIAN_CLI": "C:/Program Files/Obsidian/Obsidian.com"
+      }
+    }
+  }
+}
