@@ -127,7 +127,7 @@ pub fn is_review_candidate()->bool {exe_dir().is_some_and(|p|p.join("CANDIDATE.j
 /// 本版本对外 HTTP 服务端口。
 ///
 /// 两版**必须能同时运行**（用户要 devel 测试 + standalone 实际使用），
-/// 所以端口必须错开，且不能碰 <neighbour-port-1>/<neighbour-port-2>（a neighbouring project 的）与 18191（嵌入服务）。
+/// 所以端口必须错开，且不能碰 <邻居端口 A>/<邻居端口 B>（同机其他服务的）与 18191（嵌入服务）。
 pub const HTTP_PORT: u16 = 18198;
 pub const HTTP_PORT_DEVEL: u16 = 18197;
 

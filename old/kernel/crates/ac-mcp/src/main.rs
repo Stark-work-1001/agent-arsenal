@@ -4,7 +4,7 @@
 //!
 //! - arsenal-serve mcp  [--db <path>]   走 MCP stdio（宿主拉起它，不占端口）
 //! - arsenal-serve http [--db <path>] [--port N]
-//!   起 HTTP 常驻服务（默认 18195；<neighbour-port-1>/<neighbour-port-2> 属 a neighbouring project，严禁使用）
+//!   起 HTTP 常驻服务（默认 18195；<邻居端口 A>/<邻居端口 B> 属同机其他服务，严禁使用）
 //!
 //! 两者共用一个 CapabilityService，因此裁剪、路由、审计语义完全一致。
 

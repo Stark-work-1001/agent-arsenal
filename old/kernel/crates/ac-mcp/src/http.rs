@@ -39,7 +39,7 @@ use std::io::{BufRead, BufReader, Write, Read};
 use std::net::{TcpListener, TcpStream};
 use std::sync::Arc;
 
-/// 默认监听端口。**硬约束：18195 归本项目；<neighbour-port-1>/<neighbour-port-2> 属 a neighbouring project，严禁触碰。**
+/// 默认监听端口。**硬约束：18195 归本项目；<邻居端口 A>/<邻居端口 B> 属同机其他服务，严禁触碰。**
 pub const DEFAULT_PORT: u16 = 18195;
 
 /// 一个已解析的 HTTP 请求（只支持 GET）。
